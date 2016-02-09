@@ -26,13 +26,7 @@ const common = {
         filename: "[name].js"
     },
     module: {
-        preLoaders: [
-            {
-                test: /\.js?$/,
-                loaders: ["eslint"],
-                include: PATHS.app
-            }
-        ],
+        preLoaders: [],
 
         loaders: [
             {
