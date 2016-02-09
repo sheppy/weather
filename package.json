@@ -1,0 +1,53 @@
+{
+  "name": "weather",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheppy/weather.git"
+  },
+  "author": "Chris Sheppard (http://www.chrissheppard.co.uk/)",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/sheppy/weather/issues"
+  },
+  "homepage": "https://github.com/sheppy/weather#readme",
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-plugin-transform-class-properties": "^6.5.0",
+    "babel-plugin-transform-decorators": "^6.5.0",
+    "babel-plugin-transform-object-rest-spread": "^6.5.0",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.0",
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "react": "^0.14.7",
+    "require-dir": "^0.3.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.7.0",
+    "webpack-merge": "^0.7.3",
+    "webpack-split-by-path": "0.0.8",
+    "webpack-stream": "^3.1.0",
+    "webpack-vendor-chunk-plugin": "^1.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.9.1",
+    "immutable": "^3.7.6",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-immutable-proptypes": "^1.5.1",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1",
+    "redux-saga": "^0.7.0"
+  }
+}
