@@ -31,7 +31,6 @@
     "babel-preset-react-hmre": "^1.1.0",
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.1",
-    "react": "^0.14.7",
     "require-dir": "^0.3.0",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
