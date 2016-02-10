@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
+
+import history from "./weather/services/history";
+import routes from "./weather/routes";
+import Root from "./weather/containers/Root";
 import reducers from "./weather/reducers";
 import configureStore from "./weather/store";
-import { AppContainer } from "./weather/containers/App.jsx";
 
 const store = configureStore(reducers);
 
-ReactDOM.render(<Provider store={store}><AppContainer/></Provider>, document.getElementById("app"));
+ReactDOM.render(<Root store={store} history={history} routes={routes}/>, document.getElementById("app"));

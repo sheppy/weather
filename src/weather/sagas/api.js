@@ -1,6 +1,6 @@
-import { take, put, call } from "redux-saga";
+import { take, put, call, fork } from "redux-saga";
 import T from "../constants/ACTION_TYPES";
-import * as API from "../api";
+import * as API from "../services/api";
 
 
 function *requestWeather(location) {
