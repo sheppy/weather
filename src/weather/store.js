@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
-import startupSagas from "./sagas/api";
+import startupSagas from "./sagas";
 
 export const sagaMiddleware = createSagaMiddleware(...startupSagas);
 
