@@ -4,6 +4,7 @@ import browserSync from "browser-sync";
 import webpack from "webpack";
 import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
+import historyApiFallback from "connect-history-api-fallback";
 
 import config from "./config";
 import webpackConfig from"../webpack.config";
@@ -27,7 +28,8 @@ gulp.task("server", () => {
                     log: console.log,
                     path: "/__webpack_hmr",
                     heartbeat: 10000
-                })
+                }),
+                historyApiFallback()
             ]
         },
         notify: false,
