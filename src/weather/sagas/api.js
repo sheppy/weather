@@ -7,7 +7,9 @@ function *requestWeather(location) {
     // TODO: Error handling
     const response = yield call(API.request, "/weather", { q: location });
 
-    yield put({ type: T.API.WEATHER_SUCCESS, response, receivedAt: Date.now() });
+    let data = API.transformWeatherResponse(response);
+
+    yield put({ type: T.API.WEATHER_SUCCESS, response: data, receivedAt: Date.now() });
 }
 
 export function *watchRequestWeather() {
@@ -21,6 +23,7 @@ function *requestForecast(location) {
     // TODO: Error handling
     const response = yield call(API.request, "/forecast", { q: location });
 
+    // TODO: Enrich response
     yield put({ type: T.API.FORECAST_SUCCESS, response, receivedAt: Date.now() });
 }
 

@@ -1,14 +1,9 @@
-import { Map, fromJS } from "immutable";
-import T from "../constants/ACTION_TYPES";
+import { combineReducers } from "redux";
 
+import time from "./time";
+import weather from "./weather";
 
-export default function (state = Map(), action = {}) {
-    switch (action.type) {
-        case T.API.WEATHER_SUCCESS:
-            return state.merge({ weather: fromJS(action.response) });
-        break;
-
-        default:
-            return state;
-    }
-};
+export default combineReducers({
+    time,
+    weather
+});
