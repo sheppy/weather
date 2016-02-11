@@ -39,8 +39,7 @@ const common = {
         postLoaders: []
     },
     plugins: [
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(true),
         new SplitByPathPlugin([{
             name: "vendor",
             path: path.join(__dirname, "node_modules")
@@ -91,6 +90,7 @@ if (TARGET === "build") {
         debug: false,
 
         plugins: [
+            new webpack.optimize.DedupePlugin(),
             new webpack.optimize.UglifyJsPlugin({
                 compress: {
                     warnings: false
